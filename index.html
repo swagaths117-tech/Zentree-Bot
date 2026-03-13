@@ -179,7 +179,7 @@ const msalConfig = {
   auth: {
     clientId: 'a83ca5b1-6e2a-44a9-86b0-0f3baea8b33b',
     authority: 'https://login.microsoftonline.com/9e0d6983-aa67-48ac-ad0d-93f59e90cc1b',
-    redirectUri: 'https://swagaths117-tech.github.io/zentree-hr-bot'
+    redirectUri: 'https://swagaths117-tech.github.io/HR-Zentree-Bot/'
   },
   cache: { cacheLocation: 'sessionStorage' }
 };
@@ -204,7 +204,7 @@ function handleLogin(account) {
   const email = account.username.toLowerCase();
   if (!email.endsWith('@zentreelabs.com')) {
     document.getElementById('loginError').style.display = 'block';
-    msalInstance.logoutRedirect({ postLogoutRedirectUri: 'https://swagaths117-tech.github.io/zentree-hr-bot' });
+    msalInstance.logoutRedirect({ postLogoutRedirectUri: 'https://swagaths117-tech.github.io/HR-Zentree-Bot/' });
     return;
   }
   document.getElementById('loginScreen').style.display = 'none';
@@ -223,7 +223,7 @@ async function signIn() {
 }
 
 async function signOut() {
-  await msalInstance.logoutRedirect({ postLogoutRedirectUri: 'https://swagaths117-tech.github.io/zentree-hr-bot' });
+  await msalInstance.logoutRedirect({ postLogoutRedirectUri: 'https://swagaths117-tech.github.io/HR-Zentree-Bot/' });
 }
 
 // ── KNOWLEDGE BASE ─────────────────────────────────────────────────────────
